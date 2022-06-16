@@ -1,7 +1,7 @@
 <template>
   <main>
    
-    <h1>Task Board</h1>
+    <h1>Task Board.</h1>
     <p>Create a list of tasks</p>
 
     <div class="create-new">
