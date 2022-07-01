@@ -19,7 +19,9 @@
       <Task
         v-for="(task, i) in $store.state.tasks"
         :key="i"
-        :task="task" />
+        :task="task"
+        :index="i" />
+        
     </div>
     <div v-if="$store.state.tasks.length" class="create-new">
        <button v-if="$store.state.tasks.length" class="remove" @click="removeAllTasks">Remove All</button>

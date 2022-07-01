@@ -34,6 +34,26 @@ export default createStore({
       localStorage.setItem("TASKS", JSON.stringify(a));
       state.tasks = JSON.parse(localStorage.getItem("TASKS"));
     },
+    MOVE_TASK_UP(state, index){
+      let arr = JSON.parse(localStorage.getItem("TASKS"))
+        var element = arr[index];
+        arr.splice(index, 1);
+        arr.splice(index - 1, 0, element);
+        state.tasks = arr
+      localStorage.setItem("TASKS", JSON.stringify(arr))
+      console.log(arr)
+      console.log('up clicked '+ index)
+    },
+    MOVE_TASK_DOWN(state, index){
+      let arr = JSON.parse(localStorage.getItem("TASKS"))
+      var element = arr[index];
+      arr.splice(index, 1);
+      arr.splice(index + 1, 0, element);
+      state.tasks = arr
+    localStorage.setItem("TASKS", JSON.stringify(arr))
+    console.log(arr)
+      console.log('down clicked'+ index)
+    }
   },
   actions: {
   },
